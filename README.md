@@ -1,5 +1,7 @@
 # PriceTrackingApplication
 
+Bilgi: Program Yalnızca Hepsiburada Linkleri Üzerinde Çalışmaktadır!
+
 [TR]
  Bu Python programı, kullanıcının belirlediği bir ürünün fiyatını izleyen ve belirlenen fiyatın altına düştüğünde kullanıcıya e-posta ile bildirim gönderen bir fiyat takip uygulamasıdır.
 Kullanıcı, programı çalıştırdığında izlemek istediği ürünün URL'sini, beklediği fiyatı ve bildirim almak istediği e-posta adresini girer. Program, belirtilen URL'yi düzenli aralıklarla kontrol eder ve ürün fiyatı beklenen fiyatın altına düştüğünde, kullanıcıya bir e-posta gönderir.

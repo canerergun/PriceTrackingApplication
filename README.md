@@ -2,13 +2,50 @@
 
 Bilgi: Program Yalnızca Hepsiburada Linkleri Üzerinde Çalışmaktadır!
 
-[TR]
- Bu Python programı, kullanıcının belirlediği bir ürünün fiyatını izleyen ve belirlenen fiyatın altına düştüğünde kullanıcıya e-posta ile bildirim gönderen bir fiyat takip uygulamasıdır.
-Kullanıcı, programı çalıştırdığında izlemek istediği ürünün URL'sini, beklediği fiyatı ve bildirim almak istediği e-posta adresini girer. Program, belirtilen URL'yi düzenli aralıklarla kontrol eder ve ürün fiyatı beklenen fiyatın altına düştüğünde, kullanıcıya bir e-posta gönderir.
-Bu program, Requests ve BeautifulSoup gibi harici kütüphaneleri kullanarak web scraping işlemleri gerçekleştirir. Ayrıca, smtplib kütüphanesini kullanarak e-posta gönderme işlemlerini gerçekleştirir..
+# Ürün Fiyat İzleyici
 
+Bu kod, belirli bir ürünün fiyatını izlemek ve fiyat beklenen bir seviyeye düştüğünde kullanıcıya bildirim göndermek için tasarlanmıştır.
 
-[EN]
- This Python program is a price tracking application that monitors the price of a product specified by the user and sends an e-mail notification to the user when it falls below the specified price.
-When the user runs the program, he enters the URL of the product he wants to track, the price he expects and the email address he wants to receive notifications from. The program checks the specified URL at regular intervals and when the product price drops below the expected price, it sends an email to the user.
-This program performs web scraping using external libraries such as Requests and BeautifulSoup. It also performs email sending operations using the smtplib library.
+## Gereksinimler
+
+- Python 3.x
+- `requests` kütüphanesi
+- `BeautifulSoup` kütüphanesi
+- `smtplib` kütüphanesi
+
+## Kullanım
+
+1. Kullanıcıdan ürün URL'si, beklenen fiyat ve alıcı e-posta adresi istenir.
+2. Belirtilen URL'den ürün bilgileri alınır ve fiyat kontrol edilir.
+3. Eğer ürünün fiyatı beklenen fiyatın altındaysa, kullanıcıya e-posta gönderilir.
+4. Belirli aralıklarla fiyat kontrolü yapılır (varsayılan olarak her saatte bir).
+
+## Kod Açıklaması
+
+- `get_user_input()`: Kullanıcıdan girdi almak için bir fonksiyon.
+- `check_price(url, beklenen_fiyat, alici_email)`: Belirtilen URL'den ürün bilgilerini alıp fiyatı kontrol eden bir fonksiyon.
+- `send_mail(product_title, product_url, receiver_email)`: Belirtilen başlık, URL ve alıcı e-posta adresine e-posta gönderen bir fonksiyon.
+- Ana program akışı: Kullanıcı girdilerini al, fiyatı kontrol et ve belirli aralıklarla tekrar et.
+
+## Örnek Kullanım
+
+1. Kullanıcıdan URL, beklenen fiyat ve e-posta adresi alınır.
+2. URL'den alınan ürünün fiyatı beklenen fiyatın altındaysa, kullanıcıya e-posta gönderilir.
+3. Belirli aralıklarla fiyat kontrolü yapılır ve gerekirse e-posta gönderilir.
+
+## Notlar
+
+- Kodda Gmail SMTP sunucusu kullanıldığı için, gönderen e-posta adresi ve şifresi Google hesabınızın güvenlik ayarlarından "Daha az güvenli uygulamalara erişim" seçeneğinin etkinleştirilmesi gerekmektedir.
+- Kodda varsayılan olarak her saatte bir fiyat kontrolü yapılmaktadır. Gerekirse bu aralık değiştirilebilir.
+
+## Güvenlik Uyarısı
+
+Kod, üçüncü taraf web sitelerinden veri almak ve e-posta göndermek için kullanıcıdan alınan bilgileri kullanır. Bu nedenle, bu tür işlemlerin yasalara uygun olması ve hedef web sitesinin kullanım şartlarına uygun olması önemlidir. Ayrıca, kodu güvenliği göz önünde bulundurarak kullanmak önemlidir. Özellikle, e-posta adresi ve şifre gibi hassas bilgilerin güvenliğini sağlamak için gerekli önlemler alınmalıdır.
+
+## Lisans
+
+Bu kod örnek bir proje olarak sunulmuştur ve herhangi bir lisans altında dağıtılmaktadır. Kodu kendi projenizde veya ihtiyaçlarınıza göre değiştirebilir ve kullanabilirsiniz.
+
+---
+
+Bu belge, ürün fiyat izleme kodunun çalışma mantığını ve kullanımını anlatır. Daha fazla bilgi için kod içindeki yorum satırlarını ve ilgili kütüphanelerin belgelerini inceleyebilirsiniz.

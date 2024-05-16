@@ -9,9 +9,10 @@ Bu kod, belirli bir ürünün fiyatını izlemek ve fiyat beklenen bir seviyeye 
 ## Gereksinimler
 
 - Python 3.x
-- `requests` kütüphanesi
-- `BeautifulSoup` kütüphanesi
-- `smtplib` kütüphanesi
+- requests kütüphanesi: HTTP istekleri yapmak için gereklidir.
+- BeautifulSoup kütüphanesi: Web sayfalarını analiz etmek için kullanılır.
+- smtplib kütüphanesi: E-posta göndermek için gereklidir.
+- email.mime.text ve email.mime.multipart alt kütüphaneleri: E-posta oluşturmak için kullanılır.
 
 ## Kullanım
 

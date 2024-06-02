@@ -28,11 +28,6 @@ Bu kod, belirli bir ürünün fiyatını izlemek ve fiyat beklenen bir seviyeye 
 - `send_mail(product_title, product_url, receiver_email)`: Belirtilen başlık, URL ve alıcı e-posta adresine e-posta gönderen bir fonksiyon.
 - Ana program akışı: Kullanıcı girdilerini al, fiyatı kontrol et ve belirli aralıklarla tekrar et.
 
-## Örnek Kullanım
-
-1. Kullanıcıdan URL, beklenen fiyat ve e-posta adresi alınır.
-2. URL'den alınan ürünün fiyatı beklenen fiyatın altındaysa, kullanıcıya e-posta gönderilir.
-3. Belirli aralıklarla fiyat kontrolü yapılır ve gerekirse e-posta gönderilir.
 
 ## Notlar
 
